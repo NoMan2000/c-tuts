@@ -1,0 +1,58 @@
+<h1>Software Development Method</h1>
+
+<ol><li>Specify the problem requirements.</li><li>Analyze the problem.</li><li>Design the algorithm to solve the problem.</li><li>Write the Code.</li><li>Test and verify the completed program.</li><li>Maintain and update the program.</li></ol>
+
+<h2>Example Problem Statement:</h2>
+
+<blockquote><p>Given a list of items stored in a file, sort them in alphabetical order, and write them to another file.</p></blockquote>
+
+<p>The problem with coming up with a solution:</p>
+
+<p>The problem statement is very ambiguous.  To back it up a bit, we have no constraints.  What language must this be written in?  That is a design constraint.  A design constraint is the technical limitations of how a program can be run.  A program requirement is the definition of what the program should do.  There are two parts to that.  Functional requirements specify how something should be done, while nonfunctional requirements state the manner it should be achived in.</p>
+
+<p>A clear problem requirements states the problem without ambiguity.   In the example problem statement, the input types we will be handling are ambiguous.  Does the file contain arrays, objects, strings, characters, integers, etc.?  The number and types of data will change the way the algorithm has to be written.  The second part, &quot;Sort them in alphabetical order&quot; is also ambiguous.  Ascending or descending order?  What about special characters?  </p>
+
+<p>Analyze the problem:</p>
+
+<ul><li>What inputs are needed?</li><li>What outputs are needed?</li><li>What computations must be performed?</li><li>What additional constraints or requirements are needed?  (Nonfunctional Requirements to use the technical term.)  Such as, &quot;How should the output be displayed to the user?&quot;</li></ul>
+
+<hr/>
+
+<h2>Example Problem Statement:</h2>
+
+<p>Given the amount of widgets purchased by a person, calculate the total cost of the widgets.</p>
+
+<h3>Inputs:</h3>
+
+<p>Number of widgets purchased.
+Cost per widget.</p>
+
+<h3>Outputs:</h3>
+
+<p>Total cost of widgets.</p>
+
+<h3>Computation, formula, or algorithm:</h3>
+
+<p>totalCost = costPerWidget * widgetsPurchased</p>
+
+<h2>Notice</h2>
+
+<p>Before jumping in and immediately start writing code, it&#39;s best to begin by verifying that the algorithm works as intended.  I will demo this using a Unix program (and programming language) called BC.  This program is very simple, but very powerful.  The term for this is &quot;desk checking&quot;, although one of the biggest developments in software design has been Test-Driven Development (TDD) that emphasizes writing tests before even starting to write the code.</p>
+
+<h2>Algorithm Design.</h2>
+
+<p>One of the major concepts of programming, or general problem-solving, is top-down design.  This means breaking down a task into smaller sub-problems, until it is manageable.  With a simple problem like the one we have above, breaking it down into smaller portions isn&#39;t a problem.  We have only a few things we need to do:</p>
+
+<ol><li>Get the number of widgets they want to purchase from the user.</li><li>Compute the cost per widget by the total number of widgets the user wants.</li><li>Display the results back to the user.</li></ol>
+
+<h2>Write the Code</h2>
+
+<p>At this stage, you actually have to write the code, converting the algorithm into a workable solution.</p>
+
+<h2>Testing</h2>
+
+<p>At this stage, you need to test for error cases (validation).  Users will frequently enter in the wrong information or type of data.  How should your program handle these problems?  Does your program work for all numeric types like numbers with decimals (floats), integers, or negative numbers?  How does it handle a value of zero? </p>
+
+<h2>Updating Code</h2>
+
+<p>Several software practices involve writing maintainable and well-organized code.  One of the principles of the Zen of Python is that code is written once, but read a hundred times.  Following standard methods, best practices, and making it a habit to write clean code will help your code be maintainable and easier to debug if things should go awry.</p>

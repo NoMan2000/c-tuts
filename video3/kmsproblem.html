@@ -1,0 +1,52 @@
+<h1>Problem Statement.</h1>
+
+<p>A person enters in the distance that they ran in kilometers.  Convert it into miles.  Then, calculate how fast their time was in minutes to run a mile.</p>
+
+<ul><li>Input:  Kilometers Ran.</li><li>Output: Miles ran.</li></ul>
+
+<h2>Algorithm:</h2>
+
+<p><strong>Part 1:</strong>  Solving the conversion formula.</p>
+
+<p>distanceInMiles = kilometersRan * milesPerKilometer</p>
+
+<p><strong>Part 2:</strong>  Solving the Miles per Hour.</p>
+
+<ul><li>Input: Time to run kilometers.  Miles conversion.  </li><li>Output: Miles ran per minute</li></ul>
+
+<p>A problem should already be apparent.  How do you get the user to put in the correct time?  This should be broken down into two parts.  The first part should be time in minutes, the second part should be time in seconds.  So our first stab:</p>
+
+<h2>Refinement</h2>
+
+<ul><li>Input: Time in minutes to run.  Time in seconds to run.  Convert Minutes and Seconds to a common format.</li><li>Output: Miles ran per hour.</li></ul>
+
+<p>Our algorithm needs to convert to a standard scale.  Since seconds is the easiest scale, the minutes should be multiplied by sixty to get the correct formula.  We are initializing values that will be easy to check.  For desk checking purposes, use values that can easily be computed in your head.</p>
+
+<pre><code>    minutesToSeconds = 60
+    distanceInMiles = 4
+    secondsInHour = 3600
+
+    timeRanInMinutes = 36
+    timeRanInSeconds = 20
+
+    totalTimeInSeconds = timeRanInMinutes * minutesToSeconds + timeRanInSeconds
+    secondsPerMile = secondsInHour / totalTimeInSeconds
+
+    milesToTotalTimeInSeconds = TotalTimeInSeconds / milesRan
+    (int)minutesPerMile = milesToTotalTimeInSeconds / 60
+    (int)secondsPerMile = milesToTotalTimeInSeconds % 60
+    Output:  You ran one mile every minutesPerMile and secondsPerMile</code></pre>
+
+<h2>Further Refinement</h2>
+
+<p>It turns out that much of this code is unnecessary.  I know, I am demonstrating it to show some of the features of the C language. </p>
+
+<pre><code>    distanceInMiles = 4
+
+    timeRanInMinutes = 36
+    timeRanInSeconds = 20
+
+    minutesPerMile = timeRanInMinutes / distanceInMiles
+    secondsPerMile = timeRanInSeconds / distanceInMiles
+
+    Output: You ran one mile every minutesPerMile and secondsPerMile</code></pre>

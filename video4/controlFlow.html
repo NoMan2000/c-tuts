@@ -1,0 +1,43 @@
+<h1>Control Flow</h1>
+
+<p>Control structures control the flow of execution in a program or function.  You can google &quot;Turing Complete&quot; to learn more about this concept and why it is so important.  Instructions are organized into three categories:  Sequence, selection, and repetition.  </p>
+
+<p>Sequence is the flow of statements from top-to-bottom.  By now, you&#39;ve seen this numerous times.</p>
+
+<pre><code>    void foo(void){
+    statement1;
+    statement2;
+    statement3;
+    }</code></pre>
+
+<p>In each statement, the flow goes from top to bottom.  There are two ways to begin executing statements non-sequentially.  The first one is what we did in the last video, using a function to execute a block of code somewhere else in the program.  This function should be well-named (i.e. it should be clear what the function does) and be restricted to what is it intended to do.  </p>
+
+<p>In terms of refactoring, moving code into a function is called &quot;Method extraction&quot; refactoring.  The second technique is called componentization, breaking code down into components that are easy to understand.</p>
+
+<p>The second way to change the sequential flow is the wrong way.  It involves the use of a keyword GOTO and a keyword LABEL that specifies where the code should jump.  The problem is that this method is very vague and prompts lots of jumping around in the code.  The term for this problem is &quot;spaghetti code&quot;.</p>
+
+<p>If you are ever thinking of using GOTO and LABEL, follow this simple rule.  <strong>DON&#39;T</strong></p>
+
+<h2>Relational and Equality Checks</h2>
+
+<p>Another way to control the execution of code is to test the relationships between variables, (i.e. is the balanceOfBankAccount &gt; billsToBePaid?) or to test the equality between the two portions.  </p>
+
+<p>Here&#39;s a quick list of the <a href="https://c9.io/noman2000/c-tutorials/workspace/video4/operators.html">relational operators</a></p>
+
+<p>C does not really understand True or False as such, rather, anything which is greater than 0 is true while 0 is false.  If you ask C explicitly to test for a true value, then true will equal 1 and false will equal 0.  </p>
+
+<pre><code>    int x = 2; int y = 3; int testValue; testValue = (x &gt; y);</code></pre>
+
+<p>The output of testValue will be 1.  An important note here is that <strong>any</strong> non-zero value will be interpreted by the C Compiler as true.  This often results in problems.  To get around this, the _Bool can be used.  This was added in the C Standard because many people had written libraries that were meant to be compatible with how C++ understood bool.  To help out, the C standard library now includes the &lt;stdbool.h&gt; file which is a 2 bit data type.  It still does not exactly understand true or false, but it can add clarity to the code.</p>
+
+<h2>Logical Operators</h2>
+
+<p>Logical operators test if a set of conditions are true.  In the case of the &amp;&amp; operator, both conditions must be true in order for the evaluation to be true.  If either one is false, the entire statement is false.  If both are true, then the statement is true.  C uses &quot;lazy evaluation&quot;, which means that it evaluates as little as possible.  For example, in the case of a &amp;&amp; statement, if the left-side of the equation is false, the right-side of the equation will never be evaluated.  </p>
+
+<h2>Character Comparison</h2>
+
+<p>C treats char as a special integer, corresponding to its ASCII number.  So these can be converted to integers and tested for relations and equality.</p>
+
+<pre><code>    char &#39;a&#39; &lt; char &#39;A&#39;;</code></pre>
+
+<p>Will equal false.  </p>
