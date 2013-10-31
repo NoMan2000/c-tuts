@@ -31,4 +31,42 @@ Do while loops are syntatically tricky.  They always evaluate the expression at 
         do{
             statement1;
         }while(condition == true);
-        
+
+See the dowhile.c file for an example.  Note that if you change the condition to false, it will still run at least once.  See the falsedowhile.c file.  Note that even though the condition evaluated is if x is greater than 7, and that x is only equal to 0, the program runs at least once.
+
+##Continue
+
+The continue statement will keep the loop running, but execute a special statement when the condition is reached.  See the continue.c file for an example.
+
+##Break
+
+We have already seen the break keyword used in the switch statement.  The break statement exits out of the loop, but does not exit the entire program it is running within.  See the break.c file to see it in action, or review the switch statement from the previous video.
+
+##Exit
+
+The exit keyword will exit out of the entire program.  You must include the <stdlib.h> to use it.  The exit is with an integer value.  Some operating systems use a exit(1) to indicate a system error.  See the exit.c file.
+
+##The 'forever' Loops
+
+Another way of dealing with the problem of user input is to run an infinite for or while loop.  They look like this:
+
+        for(;;){
+            statement1;
+            conditionCheck;
+            if(conditionCheck==true){
+                break;
+            }
+        }
+
+The minimum valid for loop is for(;;).  The minimum valid while loop is:
+
+        while(1){
+            statement1;
+            conditionCheck;
+            if(conditionCheck==true){
+            break;
+            }
+        }
+
+Why use the for loop version instead of the while version?  The while version has to evaluate the condition each time.  The for version never evaluates itself.  Thus the for version is superior for performance reasons.  See the foreverLoops.c file.  
+    
