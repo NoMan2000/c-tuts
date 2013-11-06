@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void){
-    int x = 0;
+    int x = 10;
      
     do{
         printf("The value of x is %d\n", x);

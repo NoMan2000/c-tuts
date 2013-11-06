@@ -3,8 +3,9 @@
 int main(){
     char exitChar;
     
-    printf("Please type in the letter c\n");
+    
     for(;;){
+        printf("Please type in the letter c\n");
         scanf("%c", &exitChar);
         if(exitChar == 'c'){
             break;

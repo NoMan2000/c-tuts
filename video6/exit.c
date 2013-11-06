@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //There's a lot of useful functions in this.
 
 int main(){
     for(int x = 0; x < 10; x++ ){
